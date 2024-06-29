@@ -1,0 +1,18 @@
+#TASK NO.1 FIBONACCI GENERATOR
+def fibonacci_generator():
+    a, b = 0, 1
+    while True:
+      yield a
+        a, b = b, a + b
+
+# Example usage:
+limit = 100  # Change this limit as needed
+fibonacci_gen = fibonacci_generator()
+fibonacci_numbers = []
+while True:
+    fibonacci_number = next(fibonacci_gen)
+    if fibonacci_number > limit:
+        break
+    fibonacci_numbers.append(fibonacci_number)
+
+print(fibonacci_numbers)
